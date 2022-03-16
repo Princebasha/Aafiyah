@@ -1,0 +1,143 @@
+1 pipeline {
+     agent any
+     stages {
+         stage('build step') {
+              steps {
+                 echo "Build stage is running"
+              }
+         }
+     }
+	 
+	 stages {
+         stage('Test step') {
+              steps {
+                 echo "Test stage is running"
+              }
+         }
+     }
+	 
+	 stages {
+         stage('Deploy step') {
+              steps {
+                 echo "Deploy stage is running"
+              }
+         }
+     }
+}
+
+sample pipeline script
+
+2 pipeline {  
+    agent any  
+    stages {  
+            stage ('Build') {  
+                ...  
+            }  
+            stage ('Test') {  
+                ...  
+            }  
+            stage ('QA') {  
+                ...  
+            }  
+            stage ('Deploy') {  
+                ...  
+            }  
+            stage ('Monitor') {  
+                ...  
+            }  
+    }  
+}  
+
+3 pipeline {  
+    agent any  
+    stages {  
+            stage ('Build') {  
+                steps {  
+                        echo 'Running build phase...'  
+                }  
+            }  
+    }  
+}  
+
+4 pipeline {  
+    agent any  
+    stages {  
+            stage ('Build') {  
+                steps {  
+                        echo 'Running build phase...'  
+                }  
+            }
+
+            stage ('Test') {  
+                steps {  
+                        echo 'Running Test phase...'  
+                }  
+            }
+			
+            stage ('Deploy') {  
+                steps {  
+                        echo 'Running Deploy phase...'  
+                }  
+            }  			
+  
+Team Subdomain: devops-9m97679
+Integration Token Credential ID: Create a secret text credential using W7zGWCAWTmGUaHXTPH7x3nm4 
+
+6.pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}
+
+7.stages:
+  - stage1
+  - stage2
+
+build:
+  stage: stage1
+  script:
+    - echo "We are currently in stage 1"
+    - echo "These are the contents of test.py"
+    - cat test.py
+    - echo $example
+
+test:
+  stage: stage2
+  script:
+    - echo "We are currently in stage 2"
+    - echo "running python script"
+
+8. stages:
+  - stage1
+  - stage2
+
+build:
+  stage: stage1
+  script:
+    - echo "We are currently in stage 1"
+    - echo "These are the contents of test.py"
+    - cat test.py
+    - echo $example
+
+test:
+  stage: stage2
+  script:
+    - echo "We are currently in stage 2"
+    - echo "running python script"
+
+.\gitlab-runner.exe install
